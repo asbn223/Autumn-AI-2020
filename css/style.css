@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: sans-serif;
+    color: #707070;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+
+.bottomSection img {
+    height: 649px;
+    width: 649px;
+    float: left;
+    padding-top: 60px;
+}
+
+.contents h1 {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    padding-top: 15%;
+    padding-left: 750px;
+    /* float: right; */
+    color: #707070;
+}
+
+.contents h3.prize {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 750px;
+    /* float: right; */
+    color: #707070;
+}
+
+.last, .foot {
+    font-family: sans-serif;
+    color: #707070;
+    padding-top: 455px;
+    text-align: center;
+    width: auto;
+}
+
+
+#navigation {
+    height: auto;
+    width: 100%;
+}
+
+#headline {
+    width: 100%;
+    font-family: sans-serif;
+    background: black;
+    color: #fff;
+    font-size: 14px;
+}
+
+#navigation img {
+    padding: 10px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    /* auto keeps every div in center*/
+    height: auto;
+    width: 85%;
+}
+
+#container {
+    width: 100%;
+}
+
+.container-heading-top {
+    margin: 3px 0 50px 0;
+}
+
+.container-heading-top h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.container-heading h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.button a {
+    color: #fff;
+    background: #303393;
+    text-decoration: none;
+    padding: 10px 54px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+.mainLogo {
+    padding-left: 20%;
+    /* background-image: url(image/png/bg.png); */
+}
+
+.logo {
+    display: block;
+    height: 100px;
+    padding: 10px 25px;
+}
+
+.colz-logo {
+    height: 100px;
+    width: 230px;
+    float: left;
+}
+
+.event-logo {
+    height: 100px;
+    width: 300px;
+    float: right;
+}
+
+.main-section,
+.rules-section,
+.registration-section {
+    min-height: 100vh;
+}
+
+.prize-section{
+    min-height: 25vh;
+}
+
+.rules {
+    padding: 0 10px 0;
+}
+
+.rule {
+    text-align: justify;
+}
+
+.rules-section .title,
+.registration-section .row-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.rules-section .title,
+.registration-section .row-title,
+.registration-section .colz-title,
+.registration-section .register-detail {
+    text-align: center;
+
+}
+
+.registration-section .container {
+    display: flex;
+}
+
+.registration-section .col {
+    flex: 50%;
+    padding: 0 10px 0;
+}
+
+.registration-section .colz-logo-1 img,
+.registration-section .ing-logo img{
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 200px;
+    margin-right: auto;
+    height: 180px;
+}
+
+.registration-section .colz-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-left: 80px;
+}
+
+.registration-section .register-detail {
+    font-size: 20px;
+}
+
+
+.registration-section .btn {
+    margin-top: 120px;
+    position: relative;
+}
+
+.registration-section button.register-button {
+    position: absolute;
+    padding: 0 15px 0;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #303393;
+    height: 35px;
+    font-size: 18px;
+    border: 2px #000000 solid;
+    border-radius: 25px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 6;
+  top: 46%;
+  width: 100%;
+}
+
+.mainLogo {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 50%;
+  z-index: 5;
+  margin-top: -125px;
+}
+
+.mainLogo img{
+    width: 950px;
+    height: 250px;
+    border-radius: 35px;
+}
+
+.h6, h6 {
+    font-size: 1rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
