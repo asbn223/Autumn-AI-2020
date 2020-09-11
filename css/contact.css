@@ -1,0 +1,32 @@
+.contact h1 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+    color: #d71d2f;
+}
+
+.contact .contactOption {
+    font-family: sans-serif;
+    padding-top: 50px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    /* auto keeps every div in center*/
+    height: auto;
+    width: 85%;
+}
+
+.contact .contactOption {
+    background-color: #f1f2f6;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.contact .contactOption p {
+    padding-left: 20px;
+}

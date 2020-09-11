@@ -7,7 +7,7 @@
 }
 
 #slides .scrollable {
-  *zoom: 1;
+/*  *zoom: 1;*/
   position: relative;
   top: 0;
   left: 0;

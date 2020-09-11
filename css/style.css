@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +14,7 @@ html {
 body {
     height: auto;
     font-family: sans-serif;
-    color: #707070;
+    /*    color: #707070;*/
 }
 
 a {
@@ -46,7 +50,8 @@ a {
     color: #707070;
 }
 
-.last, .foot {
+.last,
+.foot {
     font-family: sans-serif;
     color: #707070;
     padding-top: 455px;
@@ -56,8 +61,45 @@ a {
 
 
 #navigation {
-    height: auto;
-    width: 100%;
+    background: #FFF;
+}
+
+#navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    float: right;
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+#navigation ul li {
+    display: block;
+    float: left;
+}
+
+#navigation ul li a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    /* uppercase all words of the text */
+    color: #303393;
+    padding: 12px 18px;
+    line-height: 67px;
+    font-weight: bold;
+}
+
+#navigation ul li a:hover{
+    color: #D71D2F;
+}
+
+#navigation ul li a.active{
+    color: red;
+}
+
+#navigation img {
+    padding: 10px;
 }
 
 #headline {
@@ -68,9 +110,6 @@ a {
     font-size: 14px;
 }
 
-#navigation img {
-    padding: 10px;
-}
 
 #wrapper {
     margin: 0 auto;
@@ -113,7 +152,6 @@ a {
 
 .mainLogo {
     padding-left: 20%;
-    /* background-image: url(image/png/bg.png); */
 }
 
 .logo {
@@ -134,18 +172,33 @@ a {
     float: right;
 }
 
+.main-section {
+    background-image: url("../image/jpg/2.jpg");
+    background-size: cover;
+}
+
 .main-section,
 .rules-section,
 .registration-section {
     min-height: 80vh;
 }
 
-.prize-section{
-    min-height: 25vh;
+.prize, contact-section{
+    max-height: 55vh;
+}
+
+.prize-img img{
+    width: 100%;
+}
+
+.rules-section{
+    margin-top: 10px;
 }
 
 .rules {
-    padding: 0 10px 0;
+    background-color: #f1f2f6;
+    padding: 5px 18px;
+    border-radius: 5%;
 }
 
 .rule {
@@ -177,7 +230,7 @@ a {
 }
 
 .registration-section .colz-logo-1 img,
-.registration-section .ing-logo img{
+.registration-section .ing-logo img {
     display: block;
     margin-bottom: 10px;
     padding-left: 200px;
@@ -217,47 +270,97 @@ a {
 }
 
 .overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 3;
-  background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .slides-navigation {
-  margin: 0 auto;
-  position: absolute;
-  z-index: 6;
-  top: 46%;
-  width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 6;
+    top: 46%;
+    width: 100%;
 }
 
 .mainLogo {
-  position: absolute;
-  width: 100%;
-  height: 250px;
-  top: 50%;
-  z-index: 5;
-  margin-top: -125px;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index: 5;
+    margin-top: -125px;
 }
 
-.mainLogo img{
+.mainLogo img {
     width: 950px;
     height: 250px;
     border-radius: 35px;
 }
 
-.h6, h6 {
+.h6,
+h6 {
     font-size: 1rem;
 }
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-bottom: .5rem;
     font-family: inherit;
     font-weight: 500;
     line-height: 1.2;
     color: inherit;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0;
     margin-bottom: .5rem;
 }
+
+/*Contact Page*/
+.contact{
+    margin: 10px;
+}
+.contact h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 50px;
+    color: #d71d2f;
+}
+
+.contact .contactOption {
+    font-family: 'Mukta', sans-serif;
+    padding: 50px 40px;
+}
+
+.contact .contactOption {
+    background-color: #f1f2f6;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.contact .contactOption p {
+    padding-left: 20px;
+}
+
