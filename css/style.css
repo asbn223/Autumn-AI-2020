@@ -415,7 +415,7 @@ h6 {
 
     #navigation .menu {
         padding-right: 75px;
-        float: none;
+/*        float: none;*/
     }
 
 
@@ -428,9 +428,11 @@ h6 {
         width: 280px;
     }
 
+/*
     #navigation .menu {
         padding: 0;
     }
+*/
 
     .rules-section .title,
     .registration-section .row-title {
