@@ -525,7 +525,7 @@ h6 {
         padding-left: 50px;
     }
 
-    .rules .title {
+    .rules .title, .rules .row-title {
         font-size: 32px;
     }
 }
@@ -575,13 +575,6 @@ h6 {
 
 @media screen and (max-width: 576px) {
 
-    /*
-        #navigation ul li a {
-            font-size: 14px;
-            padding: 12px 10px;
-        }
-*/
-
     .mainLogo img {
         width: 450px;
     }
@@ -606,7 +599,7 @@ h6 {
         border-radius: 0;
     }
 
-    .rules .title {
+    .rules .title, .rules .row-title {
         font-size: 24px;
     }
 
@@ -659,5 +652,57 @@ h6 {
 
     .contact #wrapper {
         width: auto;
+    }
+}
+
+@media screen and (max-width:350px){
+    #navigation ul li a {
+        font-size: 10px;
+    }
+    
+    .colz-logo {
+        height: 100px;
+    }
+    
+    .container-heading-top h1 {
+    font-size: 28px;
+}
+    .container-heading-top .theInfo .intro {
+        font-size: 18px;
+    }
+
+    .container-heading-top .theInfo .ques {
+        font-size: 22px;
+        padding-top: 20px;
+        padding-left: 10px;
+    }
+
+    .container-heading-top .theInfo .ans {
+        font-size: 12px;
+        padding-left: 50px;
+    }
+
+    .rules .title, .rules .row-title {
+        font-size: 26px;
+    }
+    
+    .registration-section .ing-logo img {
+        width: 250px;
+    }
+    
+    .registration-section .islington-btn {
+        margin-left: 130px;
+    }
+    
+    .registration-section .colz-logo-1 img{
+        padding-left: 45px;
+    }
+    
+    .contact .contactOption p.list-ans {
+        font-size: 18px;
+    }
+
+    .contact .contactOption ul li.list {
+        font-size: 22px;
     }
 }
