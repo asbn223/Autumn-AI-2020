@@ -452,11 +452,7 @@ h6 {
         font-size: 25px;
     }
 
-    /*
-    .registration-section .register-detail{
-        margin-right: 10px;
-    } 
-*/
+
     .registration-section .register-detail .colz-section {
         margin-left: 50px
     }
@@ -582,10 +578,12 @@ h6 {
 
     @media screen and (max-width: 576px) {
 
+/*
         #navigation ul li a {
             font-size: 14px;
             padding: 12px 10px;
         }
+*/
 
         .mainLogo img {
             width: 450px;
@@ -600,11 +598,6 @@ h6 {
     @media screen and (max-width:500px) {
         .mainLogo img {
             width: 350px;
-        }
-
-        #navigation ul li a {
-            font-size: 12px;
-            padding: 12px 10px;
         }
 
         .colz-logo {
