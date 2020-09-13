@@ -43,6 +43,7 @@
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
     <!--To link JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -50,6 +51,23 @@
 </head>
 
 <body>
+
+    <!--Start of Countdown Section-->
+<!--
+    <section class="timer-section">
+        <div class="contain" style="font-family: 'Poppins', sans-serif;">
+            <h2><span>Competiton will end after</span></h2>
+            <div class="countdown">
+                <div id="day" style="font-family: 'Poppins', sans-serif;">NA</div>
+                <div id="hour" style="font-family: 'Poppins', sans-serif;">NA</div>
+                <div id="minute" style="font-family: 'Poppins', sans-serif;">NA</div>
+                <div id="second" style="font-family: 'Poppins', sans-serif;">NA</div>
+            </div>
+        </div>
+    </section>
+-->
+    <!--End of Countdown Section-->
+
     <!--Image Slideshow-->
     <div id="slides">
 
@@ -62,8 +80,20 @@
             <img src="image/jpg/img4.jpg" alt="">
         </div>
 
+<!--
         <div class="mainLogo">
             <img src="image/png/bg1.png" alt="Autumn AI logo">
+        </div>
+-->
+        
+        <div class="contain" style="font-family: 'Poppins', sans-serif;">
+            <h2><span id="expired">Competiton will end after</span></h2>
+            <div class="countdown">
+                <div id="day" style="font-family: 'Poppins', sans-serif;"></div>
+                <div id="hour" style="font-family: 'Poppins', sans-serif;"></div>
+                <div id="minute" style="font-family: 'Poppins', sans-serif;"></div>
+                <div id="second" style="font-family: 'Poppins', sans-serif;"></div>
+            </div>
         </div>
 
     </div>
@@ -153,6 +183,7 @@
     <!--Script Files-->
     <script src="js/jquery.superslides.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/countdown.js"></script>
 
 </body>
 
