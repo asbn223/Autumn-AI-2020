@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
 * {
     margin: 0;
@@ -97,7 +96,6 @@ h6 {
 }
 
 
-
 #navigation {
     background: #FFF;
 }
@@ -168,16 +166,15 @@ h6 {
     margin: 3px 0 50px 0;
 }
 
-.container-heading-top h1 {
+.container-heading-top h1,
+.rules-section .title,
+.registration-section .row-title,
+.contactOption .title {
     font-size: 55px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.container-heading h1 {
-    text-align: center;
-    text-transform: uppercase;
-}
 
 .container-heading-top .theInfo {
     padding-top: 30px;
@@ -189,15 +186,34 @@ h6 {
     font-size: 26px;
 }
 
-.container-heading-top .theInfo .ques {
+.container-heading-top .theInfo .ques,
+.contact .contactOption ul li.list {
     font-size: 30px;
+}
+
+.contact .contactOption ul li {
+    list-style: none;
+}
+
+.container-heading-top .theInfo .ques {
     padding-top: 20px;
     padding-left: 10px;
 }
 
-.container-heading-top .theInfo .ans {
+
+.container-heading-top .theInfo .ans,
+.rules-section .rules .rule,
+.contact .contactOption .list-ans {
     font-size: 20px;
+    text-align: justify;
+}
+
+.container-heading-top .theInfo .ans {
     padding-left: 50px;
+}
+
+.contact .contactOption .list-ans {
+    margin-bottom: 10px;
 }
 
 
@@ -222,8 +238,8 @@ h6 {
 }
 
 .colz-logo {
-    height: 100px;
-    width: 230px;
+    height: 120px;
+    width: 250px;
     float: left;
 }
 
@@ -262,25 +278,14 @@ contact-section {
 }
 
 
-.rules {
+.rules,
+.contactOption {
     background-color: #f1f2f6;
     padding: 5px 18px;
     border-radius: 5%;
 }
 
-.rule {
-    text-align: justify;
-}
 
-.rules-section .title,
-.registration-section .row-title {
-    font-size: 48px;
-    font-weight: 600;
-    margin-bottom: 25px;
-}
-
-.rules-section .title,
-.registration-section .row-title,
 .registration-section .colz-title,
 .registration-section .register-detail {
     text-align: center;
@@ -366,35 +371,10 @@ contact-section {
     margin: 10px;
 }
 
-.contact h1 {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 40px;
-    color: #d71d2f;
-}
-
-.contact .contactOption {
-    font-family: 'Mukta', sans-serif;
-    padding: 50px 40px;
-}
-
 .contact .contactOption {
     background-color: #f1f2f6;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
 }
 
-.contact .contactOption p.list-ans {
-    padding-left: 20px;
-    font-size: 25px;
-}
-
-.contact .contactOption ul li.list {
-    font-size: 30px;
-}
 
 /*Countdown Timer*/
 
@@ -479,7 +459,6 @@ contact-section {
 
     #navigation .menu {
         padding-right: 0;
-        /*        float: none;*/
     }
 
 
@@ -492,15 +471,16 @@ contact-section {
         width: 280px;
     }
 
-    /*
-    #navigation .menu {
-        padding: 0;
-    }
-*/
-
+    .container-heading-top h1,
     .rules-section .title,
-    .registration-section .row-title {
-        font-size: 38px;
+    .registration-section .row-title,
+    .contactOption .title {
+        font-size: 40px;
+    }
+
+    .rules,
+    .contactOption {
+        border-radius: 0%;
     }
 
     .registration-section .colz-logo-1 img,
@@ -520,14 +500,6 @@ contact-section {
 
     .registration-section .islington-btn {
         margin-left: 140px;
-    }
-
-    .contact .contactOption p.list-ans {
-        font-size: 20px;
-    }
-
-    .contact .contactOption ul li.list {
-        font-size: 25px;
     }
 
 }
@@ -571,27 +543,24 @@ contact-section {
 
 @media screen and (max-width: 776px) {
 
-    .container-heading-top h1 {
-        font-size: 40px;
-    }
 
     .container-heading-top .theInfo .intro {
         font-size: 22px;
     }
 
-    .container-heading-top .theInfo .ques {
+    .container-heading-top .theInfo .ques, .contact .contactOption ul li.list {
         font-size: 26px;
         padding-top: 20px;
         padding-left: 10px;
     }
 
-    .container-heading-top .theInfo .ans {
+    .container-heading-top .theInfo .ans,
+    .rules-section .rules .rule,
+    .contact .contactOption .list-ans {
         font-size: 16px;
-        padding-left: 50px;
     }
 
-    .rules .title,
-    .rules .row-title {
+    .container-heading-top h1, .rules-section .title, .registration-section .row-title, .contactOption .title {
         font-size: 32px;
     }
 
@@ -647,7 +616,7 @@ contact-section {
 @media screen and (max-width: 576px) {
 
     .colz-logo {
-        height: 90px;
+        height: 100px;
         width: 200px;
     }
 
@@ -667,26 +636,17 @@ contact-section {
 
 @media screen and (max-width:500px) {
 
-    .colz-logo {
-        height: 90px;
-        width: 150px;
-    }
-
     .rules {
         border-radius: 0;
     }
 
-    .rules .title,
-    .rules .row-title {
-        font-size: 24px;
-    }
 
     .registration-section .colz-logo-1 img,
     .registration-section .ing-logo img {
         padding-left: 75px;
     }
-    
-    .last{
+
+    .last {
         position: static;
     }
 }
@@ -792,7 +752,7 @@ contact-section {
         font-size: 18px;
     }
 
-    .contact .contactOption ul li.list {
+    .contact .contactOption .list {
         font-size: 22px;
     }
 }
