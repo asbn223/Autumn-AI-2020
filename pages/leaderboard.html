@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islington Leaderboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="https://islington.edu.np/wp-content/themes/islington/images/logo.png" type="image/icon">
+    
+    <div id="navigation" class="logo">
+        <a href="../index.html"><img src="../image/png/isanding.png" class="colz-logo"></a>
+        
+<!--        <img src="../image/png/autumn.png" class="event-logo">-->
+        <ul class="menu">
+            <!-- Opening tag of unordered list ==> <ul> -->
+            <!-- Opening tag of list ==> <li> -->
+            <li>
+                <a href="../index.html" style="padding: 0">HOME</a>
+            </li> <!-- Closing tag of list ==> </li> -->
+            <!-- Opening tag of list ==> <li> -->
+            <li>
+                <a href="rules.html" style="padding-right: 0">REGISTRATION</a>
+            </li> <!-- Closing tag of list ==> </li> -->
+            <!-- Opening tag of list ==> <li> -->
+            <li>
+                <a href="contact.html" style="padding-right: 0">CONTACT US</a>
+            </li>
+            <li>
+                <a href="leaderboard.html" class="active">Leaderboards</a>
+            </li> <!-- Closing tag of list ==> </li> -->
+        </ul> <!-- Closing tag of unordered list ==> </ul> -->
+    </div>
+
+    <div id="headline">
+        <!-- Start of marquee tag -->
+        <marquee>
+            Autumn AI 2020. Something new and fun. A seven day online programming contest.
+        </marquee>
+        <!-- End of marquee tag-->
+    </div>
+
+
+</head>
+
+<body style="background-image:url(../image/jpg/leaderboard_bg.jpg); background-size: cover;">
+    <h1>
+        <center>ISLINGTON LEADERBOARD</center>
+    </h1>
+
+    <div class="lboard_section">
+        <div class="lboard_tabs">
+            <div class="tabs">
+            </div>
+        </div>
+
+        <div class="lboard_wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Profile</th>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>CG Rank</th>
+                        <th>League</th>
+                        <th>Prog.Lang.</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="headingg" style="overflow-y: scroll; overflow-x:hidden;
+                scrollbar-color: rebeccapurple green;
+                scrollbar-width: thin;">
+                <div id="table-wrapper">
+                    <div id="table-scroll">
+
+                        <table id="table" width=100%>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="foot" style="padding-top: 45px; position: static">
+        <h6>
+            © 2020 Islington College. All Rights Reserved.
+        </h6>
+        <h6>Designed by Computing Team TA - 2020</h6>
+    </footer>
+    
+    <script src="../js/codinGame-API.js"></script>
+</body>
+
+</html>

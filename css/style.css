@@ -80,7 +80,6 @@ h6 {
     text-align: center;
     padding-top: 20px;
     padding-left: 750px;
-    /* float: right; */
     color: #707070;
 }
 
@@ -105,7 +104,6 @@ h6 {
     padding: 0;
     list-style: none;
     float: right;
-    /*    padding-right: 50px;*/
     padding-top: 20px;
 }
 
@@ -119,7 +117,6 @@ h6 {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     text-transform: uppercase;
-    /* uppercase all words of the text */
     color: #303393;
     padding: 12px 18px;
     line-height: 67px;
@@ -145,7 +142,6 @@ h6 {
 #headline {
     width: 100%;
     font-family: sans-serif;
-    /*    background: black;*/
     color: #000;
     font-size: 14px;
 }
@@ -452,6 +448,140 @@ contact-section {
     content: "Seconds";
 }
 
+h1 {
+    color: rgb(1, 2, 90);
+    padding-top: 30px;
+    font-size: 50px;
+}
+
+/* table css */
+
+
+table {
+    position: relative;
+}
+
+#table-scroll {
+    height: 410px;
+    overflow: overlay;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table * {
+    background: transparent;
+    color: black;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.lboard_section {
+    width: 1000px;
+    height: 530px;
+    margin: 50px auto 0;
+    /* background:rgb(1, 2, 90); */
+    /* opacity: 80%; */
+    /* padding: 25px 40px; */
+    position: relative;
+    border-radius: 5px;
+}
+
+.lboard_section .lboard_tabs ul {
+    display: flex;
+}
+
+.lboard_section .lboard_tabs ul li {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #3a3d51;
+    cursor: pointer;
+}
+
+.lboard_section .lboard_tabs ul li:hover,
+.lboard_section .lboard_tabs ul li.active {
+    color: #fff;
+}
+
+.lboard_wrap {
+    position: absolute;
+    top: -10px;
+    /* left: -70px; */
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #5684c0;
+
+    width: 110%;
+    height: 95%;
+}
+
+.lboard_wrap .lboard_mem img.avatar {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.headingg {
+    color: black;
+    font-weight: bold;
+    margin: 10px;
+    margin-right: 10px;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 20px;
+}
+
+tr:nth-child(odd) {
+    background: #ececec;
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+    color: white;
+}
+
+th {
+    background-color: #5684c0;
+    color: black;
+}
+
+tr:nth-child(even):hover {
+    background-color: whitesmoke;
+
+    transform: scale(1.03);
+    transition: transform 0.5s;
+}
+
+
+tr:nth-child(odd):hover {
+    background-color: #ececec;
+    transform: scale(1.03);
+    transition: transform 0.5s;
+}
+
+
 
 /*Responsiveness*/
 
@@ -548,7 +678,8 @@ contact-section {
         font-size: 22px;
     }
 
-    .container-heading-top .theInfo .ques, .contact .contactOption ul li.list {
+    .container-heading-top .theInfo .ques,
+    .contact .contactOption ul li.list {
         font-size: 26px;
         padding-top: 20px;
         padding-left: 10px;
@@ -560,7 +691,10 @@ contact-section {
         font-size: 16px;
     }
 
-    .container-heading-top h1, .rules-section .title, .registration-section .row-title, .contactOption .title {
+    .container-heading-top h1,
+    .rules-section .title,
+    .registration-section .row-title,
+    .contactOption .title {
         font-size: 32px;
     }
 
@@ -755,4 +889,148 @@ contact-section {
     .contact .contactOption .list {
         font-size: 22px;
     }
+}
+
+@media only screen and (max-width: 900px),
+(min-device-width: 100px) and (max-device-width: 1024px) {
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: inline-block;
+        margin-top: 0px;
+
+
+    }
+
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+
+    table {
+        padding-left: 18%;
+        border-collapse: separate;
+        left: -30px;
+    }
+
+    #table-scroll {
+        height: 410px;
+        overflow: overlay;
+        margin-top: 10px;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        position: relative;
+        padding-left: 60%;
+        padding-top: 3%;
+        margin-bottom: 15px;
+
+    }
+
+    tr {
+        border: 1.5px solid lightblue;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        text-align: center;
+    }
+
+    .lboard_section {
+        width: 500px;
+        height: 425px;
+        margin: 50px auto 0;
+        opacity: 80%;
+        padding: 25px 40px;
+        position: relative;
+        border-radius: 5px;
+    }
+
+    .lboard_section {
+
+        background: transparent;
+
+    }
+
+    .lboard_wrap {
+
+        height: 100%;
+        width: 80%;
+    }
+
+    tr {
+        width: 300px;
+
+    }
+
+    tr:nth-of-type(odd) {
+        background: #ececec;
+    }
+
+    tr:nth-child(even) {
+        background-color: #ececec;
+    }
+
+    tr:nth-child(even):hover {
+        /* background-color:#cabcbc; */
+        background-color: #ececec;
+        transform: scale(0.8);
+        transition: transform 0.5s;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    tr:nth-child(odd):hover {
+        /* background-color: #cabcbc; */
+
+        transform: scale(0.8);
+        transition: transform 0.5s;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*
+	Label the data
+	*/
+    td:nth-of-type(1):before {
+        content: "Profile";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Rank";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Username";
+    }
+
+    td:nth-of-type(4):before {
+        content: "CG Rank";
+    }
+
+    td:nth-of-type(5):before {
+        content: "League";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Prog.Lang";
+    }
+
 }
