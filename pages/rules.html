@@ -11,30 +11,35 @@
     <link rel="icon" href="https://islington.edu.np/wp-content/themes/islington/images/logo.png" type="image/icon">
     <link href="../css/style.css" rel="stylesheet" type="text/css">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <div id="navigation" class="logo">
-        <a href="../index.html"><img src="../image/png/isanding.png" class="colz-logo"></a>
-<!--        <img src="../image/png/autumn.png" class="event-logo">-->
-        <ul class="menu">
-            <!-- Opening tag of unordered list ==> <ul> -->
-            <!-- Opening tag of list ==> <li> -->
-            <li>
-                <a href="../index.html" style="padding: 0">HOME</a>
-            </li> <!-- Closing tag of list ==> </li> -->
-            <!-- Opening tag of list ==> <li> -->
-            <li>
-                <a class="active" href="rules.html" style="padding-right: 0">REGISTRATION</a>
-            </li> <!-- Closing tag of list ==> </li> -->
-            <!-- Opening tag of list ==> <li> -->
-            <li>
-                <a href="contact.html" style="padding-right: 0">CONTACT US</a>
-            </li>
-            <li>
-                <a href="leaderboard.html">Leaderboards</a>
-            </li> <!-- Closing tag of list ==> </li> -->
-        </ul> <!-- Closing tag of unordered list ==> </ul> -->
-    </div>
+
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    
+    <!--To link JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="lo-go">
+            <img class="colz-logo" src="../image/png/isanding.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="rules.html" class="active">Registration</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </header>
 
     <div id="headline">
         <!-- Start of marquee tag -->
@@ -43,14 +48,6 @@
         </marquee>
         <!-- End of marquee tag-->
     </div>
-
-    <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
-
 
     <!--Start of Rules Section-->
     <section class="rules-section">
@@ -118,6 +115,8 @@
         </h6>
         <h6>Designed by Computing Team TA - 2020</h6>
     </footer>
+    
+    <script src="../js/menu.js"></script>
 
 </body>
 

@@ -1,5 +1,5 @@
 fetch('https://codingameapi.herokuapp.com/').then(function (response) {
-//fetch('http://127.0.0.1:5000/').then(function (response) {
+    //fetch('http://127.0.0.1:5000/').then(function (response) {
     return response.json();
 }).then(function (data) {
     appendData(data);
@@ -7,13 +7,11 @@ fetch('https://codingameapi.herokuapp.com/').then(function (response) {
 
 function appendData(data) {
     var islington = [];
-    var hideAccount = ['SamyogShrestha', 'AcharyaHeeman', 'Jagaran_Maharjan', 'rasnaah'];
-        var num = 1;
-//        var mainContainer = document.getElementById("myData");
-    var mainTable = document.getElementById("table");
+    var noSchoolName = ['FluidWizard', 'NarbiSanji', 'SPARROT', 'raister21'];
+    var hideAccount = ['SamyogShrestha', 'RogerSir', 'Jagaran_Maharjan', 'rasnaah', 'FinalFantasy0057', 'ilaniam', 'MIRACLE-'];
+    var section = document.getElementById("sec");
     for (var i = 0; i < data.length; i++) {
         if (data[i].school == "Islington College - काठमाडौँ" || data[i].company == "Islington College" || data[i].school == "Islington College" || data[i].company == "Islington College - काठमाडौँ") {
-            //            console.log(data[i].pseudo);
             islington.push(data[i]);
         }
 
@@ -27,69 +25,81 @@ function appendData(data) {
         }
     }
 
-//        for (var k = 0; k < islington.length; k++) {
-//            var div = document.createElement("div");
-//            div.classList.add("newClass");
-//            div.innerHTML = num + ' Name: ' + islington[k].username;
-//            mainContainer.appendChild(div);
-//            num++;
-//        }
-
     for (var l = 0; l < islington.length; l++) {
-        var tr = document.createElement('tr');
-        var td1 = document.createElement('td');
-        var td2 = document.createElement('td');
-        var td3 = document.createElement('td');
-        var td4 = document.createElement('td');
-        var td5 = document.createElement('td');
-        var td6 = document.createElement('td');
-        var div = document.createElement('div');
-        var div2 = document.createElement('div');
-        var div3 = document.createElement('div');
-        var div4 = document.createElement('div');
+        var leagueTitle = "";
+        var box = document.createElement('div');
+        var imgBx = document.createElement('div');
+        var content = document.createElement('div');
         var img = document.createElement('img');
-        var img2 = document.createElement('img');
-        div.classList.add('lboard_mem');
-        div2.classList.add('img');
-        if(islington[l].avatar != "default"){
-            img.src="https://static.codingame.com/servlet/fileservlet?id="+islington[l].avatar+"&amp;format=navigation_avatar";
+        var h2 = document.createElement('h2');
+        var br = document.createElement('br');
+        var br1 = document.createElement('br');
+        var br2 = document.createElement('br');
+        var br3 = document.createElement('br');
+        var span = document.createElement('span');
+        var league = document.createElement('span');
+        var rank = document.createElement('span');
+        var cg_rank = document.createElement('span');
+
+
+        if (islington[l].avatar != "default") {
+            img.src = "https://static.codingame.com/servlet/fileservlet?id=" + islington[l].avatar + "&amp;format=navigation_avatar";
+        } else {
+            img.src = "../image/png/default.png";
         }
-        else{
-            img.src="../image/png/default.png";
+        imgBx.appendChild(img);
+        imgBx.classList.add('imgBx');
+
+        if (islington[l].league == 0 || islington[l].league == 1 || islington[l].league == 2) {
+            leagueTitle = "Wood";
+        } else if (islington[l].league == 3) {
+            leagueTitle = "Bronze";
+        } else if (islington[l].league == 4) {
+            leagueTitle = "Sliver";
+        } else if (islington[l].league == 5) {
+            leagueTitle = "Gold";
+        } else if (islington[l].league == 6) {
+            leagueTitle = "Legend";
         }
-        img.classList.add('avatar');
-        div2.appendChild(img);
-        div.appendChild(div2);
-        td1.appendChild(div);
-        
-        td2.innerHTML = islington[l].rank;
-        td3.innerHTML = islington[l].username;
-        td4.innerHTML = islington[l].cg_rank;
-        td6.innerHTML = islington[l].prog_lang;
-        if(islington[l].league == 0 || islington[l].league == 1 || islington[l].league == 2){
-            img2.src="../image/league/wood.png";
-        }
-        else if(islington[l].league == 3){
-            img2.src="../image/league/bronze.png";
-        }
-        else if(islington[l].league == 4){
-            img2.src="../image/league/silver.png";
-        }
-        else if(islington[l].league == 5){
-            img2.src="../image/league/gold.png";
-        }
-        else if(islington[l].league == 6){
-            img2.src="../image/league/legend.png";
-        }
-        div4.appendChild(img2);
-        div3.appendChild(div4);
-        td5.appendChild(div3)
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-        tr.appendChild(td5);
-        tr.appendChild(td6);
-        mainTable.appendChild(tr);
+
+
+        h2.innerHTML = "Name: "+ islington[l].username;
+        span.innerHTML = "Prog.: " + islington[l].prog_lang;
+        league.innerHTML = "League: " + leagueTitle;
+        rank.innerHTML = "Rank: " + (l+1);
+        cg_rank.innerHTML = "CG-Rank: "+ islington[l].cg_rank;
+
+
+        h2.appendChild(br);
+        h2.appendChild(span);
+        span.appendChild(br2);
+        span.appendChild(rank);
+        span.appendChild(br1);
+        span.appendChild(cg_rank);
+        span.appendChild(br3);
+        span.appendChild(league);
+        content.appendChild(h2);
+        content.classList.add('content');
+
+        box.appendChild(imgBx);
+        box.appendChild(content);
+        box.classList.add('box');
+
+
+        section.appendChild(box);
+
     }
+    var footer = document.createElement('footer');
+    var h6 = document.createElement('h6');
+    var h62 = document.createElement('h6');
+
+    h6.innerHTML = "© 2020 Islington College. All Rights Reserved.";
+    h62.innerHTML = "Designed by Computing Team TA - 2020";
+    footer.appendChild(h6);
+    footer.appendChild(h62);
+    footer.style.position = 'static';
+    footer.style.paddingTop = "45px";
+    footer.classList.add('foot');
+
+    section.appendChild(footer);
 }
