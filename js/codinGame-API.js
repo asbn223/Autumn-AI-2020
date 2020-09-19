@@ -7,25 +7,32 @@ fetch('https://codingameapi.herokuapp.com/').then(function (response) {
 
 function appendData(data) {
     var islington = [];
+    var account = [];
     var noSchoolName = ['FluidWizard', 'NarbiSanji', 'SPARROT', 'raister21'];
-    var hideAccount = ['SamyogShrestha', 'RogerSir', 'Jagaran_Maharjan', 'rasnaah', 'FinalFantasy0057', 'ilaniam', 'MIRACLE-'];
+    var hideAccount = ['SamyogShrestha', 'RogerSir', 'Jagaran_Maharjan', 'rasnaah', 'FinalFantasy0057', 'ilaniam', 'MIRACLE-', 'ErebosTheos'];
     var section = document.getElementById("sec");
     for (var i = 0; i < data.length; i++) {
-        if (data[i].school == "Islington College - काठमाडौँ" || data[i].company == "Islington College" || data[i].school == "Islington College" || data[i].company == "Islington College - काठमाडौँ") {
+        if (data[i].school == "Islington College - काठमाडौँ" || data[i].company == "Islington College" || data[i].school == "Islington College" || data[i].company == "Islington College - काठमाडौँ" || data[i].username == noSchoolName[0] || data[i].username == noSchoolName[1] || data[i].username == noSchoolName[2] || data[i].username == noSchoolName[3]) {
             islington.push(data[i]);
         }
-
     }
+    
+    
 
     for (var j = 0; j < islington.length; j++) {
-        for (var k = 0; k < hideAccount.length; k++) {
-            if (islington[j].username.toLowerCase() == hideAccount[k].toLowerCase()) {
-                islington.splice(j, 1); // Removes data from the array.
-            }
+//        for (var k = 0; k < hideAccount.length; k++) {
+//            if (islington[j].username.toLowerCase() == hideAccount[k].toLowerCase()) {
+//                console.log(hideAccount[k]);
+//                islington.splice(j, 1); // Removes data from the array.
+//            }
+//        }
+        
+        if(islington[j].username != hideAccount[0] && islington[j].username != hideAccount[1]&& islington[j].username != hideAccount[2] && islington[j].username != hideAccount[3] && islington[j].username != hideAccount[4] && islington[j].username != hideAccount[5] && islington[j].username != hideAccount[6] && islington[j].username != hideAccount[7]){
+            account.push(islington[j]);
         }
     }
 
-    for (var l = 0; l < islington.length; l++) {
+    for (var l = 0; l < account.length; l++) {
         var leagueTitle = "";
         var box = document.createElement('div');
         var imgBx = document.createElement('div');
@@ -42,32 +49,32 @@ function appendData(data) {
         var cg_rank = document.createElement('span');
 
 
-        if (islington[l].avatar != "default") {
-            img.src = "https://static.codingame.com/servlet/fileservlet?id=" + islington[l].avatar + "&amp;format=navigation_avatar";
+        if (account[l].avatar != "default") {
+            img.src = "https://static.codingame.com/servlet/fileservlet?id=" + account[l].avatar + "&amp;format=navigation_avatar";
         } else {
             img.src = "../image/png/default.png";
         }
         imgBx.appendChild(img);
         imgBx.classList.add('imgBx');
 
-        if (islington[l].league == 0 || islington[l].league == 1 || islington[l].league == 2) {
+        if (account[l].league == 0 || account[l].league == 1 || account[l].league == 2) {
             leagueTitle = "Wood";
-        } else if (islington[l].league == 3) {
+        } else if (account[l].league == 3) {
             leagueTitle = "Bronze";
-        } else if (islington[l].league == 4) {
+        } else if (account[l].league == 4) {
             leagueTitle = "Sliver";
-        } else if (islington[l].league == 5) {
+        } else if (account[l].league == 5) {
             leagueTitle = "Gold";
-        } else if (islington[l].league == 6) {
+        } else if (account[l].league == 6) {
             leagueTitle = "Legend";
         }
 
 
-        h2.innerHTML = "Name: "+ islington[l].username;
-        span.innerHTML = "Prog.: " + islington[l].prog_lang;
+        h2.innerHTML = "Name: "+ account[l].username;
+        span.innerHTML = "Prog.: " + account[l].prog_lang;
         league.innerHTML = "League: " + leagueTitle;
         rank.innerHTML = "Rank: " + (l+1);
-        cg_rank.innerHTML = "CG-Rank: "+ islington[l].cg_rank;
+        cg_rank.innerHTML = "CG-Rank: "+ account[l].cg_rank;
 
 
         h2.appendChild(br);
